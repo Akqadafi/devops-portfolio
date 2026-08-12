@@ -6,7 +6,7 @@ Source for [akqadafi.com](https://akqadafi.com), a cloud engineering portfolio f
 
 - React 19 and TypeScript
 - vinext / Vite
-- Cloudflare-compatible production runtime
+- Static Cloudflare Pages export plus a Cloudflare-compatible runtime
 - GitHub Actions for build and rendered-content checks
 
 ## Local development
