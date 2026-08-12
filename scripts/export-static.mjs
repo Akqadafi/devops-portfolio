@@ -20,6 +20,11 @@ const context = {
 
 const routes = [
   ["/", "index.html"],
+  ["/projects", "projects/index.html"],
+  ["/projects/data/teen-participation", "projects/data/teen-participation/index.html"],
+  ["/projects/data/virtual-club-ux", "projects/data/virtual-club-ux/index.html"],
+  ["/projects/data/diy-stem", "projects/data/diy-stem/index.html"],
+  ["/projects/data/marginalized-youth", "projects/data/marginalized-youth/index.html"],
   ["/robots.txt", "robots.txt"],
   ["/sitemap.xml", "sitemap.xml"],
 ];

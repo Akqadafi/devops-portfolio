@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: "https://akqadafi.com", lastModified: new Date(), changeFrequency: "monthly", priority: 1 }];
+  const routes = ["", "/projects", "/projects/data/teen-participation", "/projects/data/virtual-club-ux", "/projects/data/diy-stem", "/projects/data/marginalized-youth"];
+  return routes.map((route, index) => ({ url: `https://akqadafi.com${route}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: index === 0 ? 1 : index === 1 ? 0.9 : 0.8 }));
 }

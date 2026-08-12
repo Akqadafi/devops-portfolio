@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render() {
+async function render(path = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -19,12 +19,25 @@ test("server-renders the DevOps portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /Ahmad Qadafi \| AWS DevOps &amp; Cloud Engineer/);
-  assert.match(html, /Secure cloud systems\./);
+  assert.match(html, /Cloud systems\./);
   assert.match(html, /Secure AWS Application Platform/);
   assert.match(html, /Multi-Region Data Residency Platform/);
-  assert.match(html, /Familiar: Local Automation Server/);
+  assert.match(html, /Unlocking the Power of DIY STEM/);
   assert.match(html, /application\/ld\+json/);
   assert.doesNotMatch(html, /Your site is taking shape|SkeletonPreview/);
+});
+
+test("renders the project hub and migrated data case studies", async () => {
+  const projects = await (await render("/projects")).text();
+  assert.match(projects, /Where Are the Teens\?/);
+  assert.match(projects, /Virtual Club UX Study/);
+  assert.match(projects, /Unlocking the Power of DIY STEM/);
+  assert.match(projects, /Investing in Our Future/);
+
+  const caseStudy = await (await render("/projects/data/diy-stem")).text();
+  assert.match(caseStudy, /Latent class analysis/);
+  assert.match(caseStudy, /255/);
+  assert.match(caseStudy, /From evidence to action/);
 });
 
 test("includes recruiter contact and public project destinations", async () => {
