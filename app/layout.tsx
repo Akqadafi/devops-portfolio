@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   keywords: ["AWS DevOps Engineer", "Cloud Engineer", "Data Engineer", "Terraform", "AWS", "Infrastructure as Code", "Data Analysis", "Program Evaluation"],
   authors: [{ name: "Ahmad Qadafi" }],
   creator: "Ahmad Qadafi",
+  icons: { icon: [{ url: "/favicon.png", type: "image/png", sizes: "256x256" }], shortcut: "/favicon.png", apple: "/favicon.png" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", url: "https://akqadafi.com", title: "Ahmad Qadafi | AWS DevOps & Cloud Engineer",
