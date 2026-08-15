@@ -30,3 +30,4 @@ node --test tests/rendered-html.test.mjs
 - [Secure AWS Application Platform](https://github.com/Akqadafi/aws-secure-application-platform)
 - [Multi-Region Data Residency Platform](https://github.com/Akqadafi/aws-multi-region-data-residency-platform)
 - [Familiar: Local Automation Server](https://github.com/Akqadafi/familiar-second-brain)
+- [Community Health Operations Intelligence](https://github.com/Akqadafi/healthcare-decision-intelligence-platform)

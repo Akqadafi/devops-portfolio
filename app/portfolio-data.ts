@@ -10,6 +10,7 @@ export type Project = {
   href: string;
   metric?: string;
   metricLabel?: string;
+  repositoryHref?: string;
 };
 
 export const devopsProjects: Project[] = [
@@ -99,5 +100,18 @@ export const dataProjects: Project[] = [
     tags: ["Qualitative Research", "Survey Research", "Community Data", "Policy"],
     href: "/projects/data/marginalized-youth",
   },
+  {
+    slug: "community-health-intelligence",
+    number: "D05",
+    title: "Community Health Operations Intelligence",
+    category: "Data & Research",
+    summary: "A decision intelligence platform that combines public CDC, Census, and CMS data to prioritize healthcare outreach and resource investment across Arizona counties.",
+    challenge: "Where should a health system or public-health team invest limited outreach, mobile-clinic, care-coordination, or grant resources first?",
+    highlights: ["Reproducible ingestion for CDC PLACES, Census ACS, and CMS hospital data", "Explainable four-domain priority score with explicit missing-data treatment", "Interactive county profiles and budget-aware resource allocation simulator", "Automated tests, data contracts, lineage, Docker, GitHub Actions, and Terraform"],
+    tags: ["Healthcare Analytics", "Python", "Streamlit", "Terraform"],
+    href: "/projects/data/community-health-intelligence",
+    repositoryHref: "https://github.com/Akqadafi/healthcare-decision-intelligence-platform",
+    metric: "15",
+    metricLabel: "Arizona counties scored with public aggregate data",
+  },
 ];
-

@@ -33,11 +33,17 @@ test("renders the project hub and migrated data case studies", async () => {
   assert.match(projects, /Virtual Club UX Study/);
   assert.match(projects, /Unlocking the Power of DIY STEM/);
   assert.match(projects, /Investing in Our Future/);
+  assert.match(projects, /Community Health Operations Intelligence/);
 
   const caseStudy = await (await render("/projects/data/diy-stem")).text();
   assert.match(caseStudy, /Latent class analysis/);
   assert.match(caseStudy, /255/);
   assert.match(caseStudy, /From evidence to action/);
+
+  const healthCaseStudy = await (await render("/projects/data/community-health-intelligence")).text();
+  assert.match(healthCaseStudy, /CDC PLACES/);
+  assert.match(healthCaseStudy, /75\.1/);
+  assert.match(healthCaseStudy, /github\.com\/Akqadafi\/healthcare-decision-intelligence-platform/);
 });
 
 test("includes recruiter contact and public project destinations", async () => {
