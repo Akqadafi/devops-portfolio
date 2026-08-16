@@ -44,6 +44,9 @@ test("renders the project hub and migrated data case studies", async () => {
   assert.match(healthCaseStudy, /CDC PLACES/);
   assert.match(healthCaseStudy, /75\.1/);
   assert.match(healthCaseStudy, /github\.com\/Akqadafi\/healthcare-decision-intelligence-platform/);
+  assert.match(healthCaseStudy, /Browse another case study/);
+  assert.match(healthCaseStudy, /\/projects\/data\/teen-participation/);
+  assert.match(healthCaseStudy, /\/projects\/data\/virtual-club-ux/);
 });
 
 test("includes recruiter contact and public project destinations", async () => {
