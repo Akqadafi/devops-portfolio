@@ -1,13 +1,13 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages -- Native navigation avoids broken hosted vinext client routing. */
 
 export function SiteHeader() {
   return <header className="site-header">
-    <Link className="brand" href="/" aria-label="Ahmad Qadafi — home">AQ<span>.</span></Link>
-    <nav aria-label="Primary navigation"><Link href="/projects">Projects</Link><Link href="/#skills">Skills</Link><Link href="/#experience">Experience</Link><Link href="/#about">About</Link></nav>
+    <a className="brand" href="/" aria-label="Ahmad Qadafi — home">AQ<span>.</span></a>
+    <nav aria-label="Primary navigation"><a href="/projects">Projects</a><a href="/#skills">Skills</a><a href="/#experience">Experience</a><a href="/#about">About</a></nav>
     <a className="header-contact" href="mailto:akqadafi@gmail.com">Let&apos;s talk <span aria-hidden="true">↗</span></a>
   </header>;
 }
 
 export function SiteFooter() {
-  return <footer><Link className="brand" href="/" aria-label="Ahmad Qadafi home">AQ<span>.</span></Link><p>Ahmad Qadafi, PhD · Cloud Engineering &amp; Data Systems</p><a href="mailto:akqadafi@gmail.com">Contact ↗</a></footer>;
+  return <footer><a className="brand" href="/" aria-label="Ahmad Qadafi home">AQ<span>.</span></a><p>Ahmad Qadafi, PhD · Cloud Engineering &amp; Data Systems</p><a href="mailto:akqadafi@gmail.com">Contact ↗</a></footer>;
 }
