@@ -1,0 +1,23 @@
+{
+  "cycle_id": "demo-2026-Q2",
+  "decision_id": "ce71c9fc88b743b591023fa9a2180cd8",
+  "approved_by": "local-demo-user",
+  "approved_at": "2026-09-14T18:19:45.972610+00:00",
+  "contains_participant_identifiers": false,
+  "datasets": [
+    {
+      "dataset": "program_a",
+      "version": 1,
+      "run_id": "0b8daa17e3c9",
+      "sha256": "12277c13eda69a05d34f29cf0787f2746757ada8b3a8ea9314166862ae7a8654",
+      "report": "program_a-v1.csv"
+    },
+    {
+      "dataset": "program_b",
+      "version": 2,
+      "run_id": "aa8fcaddf546",
+      "sha256": "12277c13eda69a05d34f29cf0787f2746757ada8b3a8ea9314166862ae7a8654",
+      "report": "program_b-v2.csv"
+    }
+  ]
+}

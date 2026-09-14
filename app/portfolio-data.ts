@@ -47,6 +47,18 @@ export const devopsProjects: Project[] = [
     tags: ["Python", "Automation", "MCP", "Testing"],
     href: "https://github.com/Akqadafi/familiar-second-brain",
   },
+  {
+    slug: "aws-health-reporting",
+    number: "04",
+    title: "AWS Public Health Reporting Workflow",
+    category: "Cloud & DevOps",
+    summary: "A public-health reporting workflow with required-dataset tracking, versioned corrections, manager review, and approved report archives. Demonstrated locally with synthetic data.",
+    challenge: "Track what is missing, which version passed validation, and exactly which output a manager approved.",
+    highlights: ["Required datasets and preserved submission versions", "Validation details and de-identified draft reports", "Manager decisions with stale-review protection", "Approved-only archives with version and checksum evidence"],
+    tags: ["Python", "FastAPI", "SQL", "Data Engineering"],
+    href: "/projects/aws-health-reporting",
+  },
+
 ];
 
 export const dataProjects: Project[] = [

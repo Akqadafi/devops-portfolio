@@ -157,3 +157,17 @@ footer p { color: rgba(255,255,255,0.56); font-size: 0.7rem; }footer > a:last-ch
   .project-title-row h3 { font-size: 2.25rem; }.project-link { width: 44px; height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; } }
+
+.reporting-case .kicker, .reporting-case .back-link, .reporting-case .source-note, .reporting-case .case-metric span, .reporting-case .case-repository-link { font-size: .875rem; }
+.reporting-case .case-copy p { font-size: 1rem; line-height: 1.75; }
+.reporting-case .case-hero h1 { font-size: clamp(3rem, 6.5vw, 6.8rem); line-height: 1; }
+.reporting-steps { padding: 0; list-style: none; }
+.reporting-steps li { display: grid; grid-template-columns: 42px 1fr; gap: 20px; border-top: 1px solid var(--line); padding: 24px 0; }
+.reporting-steps li > span { font-family: var(--mono); color: var(--accent-dark); font-size: .875rem; }
+.reporting-steps h3 { margin: 0; font-size: 1.2rem; }
+.reporting-evidence { margin: 32px 0 0; }
+.reporting-evidence img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.reporting-evidence figcaption { font-size: .875rem; line-height: 1.6; margin-top: 16px; color: var(--ink-soft); }
+.reporting-decisions > div { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.reporting-decisions dt { font-size: 1.15rem; font-weight: 750; }
+.reporting-decisions dd { margin: 12px 0 0; line-height: 1.75; }
