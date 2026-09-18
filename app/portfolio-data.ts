@@ -69,10 +69,10 @@ export const productProjects: Project[] = [
     category: "Applied AI & Product Engineering",
     summary: "A teacher-controlled planning workspace for modular lessons, student handouts, answer keys, and reviewable AI-assisted drafts.",
     challenge: "How can AI accelerate lesson preparation without hiding uncertainty, accepting incomplete output, or taking control away from teachers?",
-    highlights: ["Preset, customized, and build-from-scratch lesson paths", "Section-level editing and regeneration that preserve the rest of a draft", "Student handouts, teacher keys, Word/PDF exports, and design themes", "Request safeguards, structured validation, 75 offline tests, and tagged releases"],
+    highlights: ["Preset, customized, and build-from-scratch lesson paths", "Section-level editing and regeneration that preserve the rest of a draft", "Student handouts, teacher keys, Word/PDF exports, and design themes", "Milestone 1 reliability audit, 86 offline tests, and tagged releases"],
     tags: ["Flask", "OpenAI API", "Product Engineering", "Reliability"],
     href: "/projects/lesson-planner",
-    metric: "75",
+    metric: "86",
     metricLabel: "offline regression tests with mocked AI calls",
   },
 ];

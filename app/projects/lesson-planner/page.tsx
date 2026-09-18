@@ -25,8 +25,8 @@ export default function LessonPlannerCaseStudy() {
     </section>
     <section className="case-body section-shell">
       <aside><p className="kicker">Release baseline</p><p className="source-note">Local prototype developed with AI-assisted coding and tested without paid model calls.</p>
-        <div className="case-metric"><strong>75</strong><span>offline regression tests covering planning, editing, exports, validation, and request safety</span></div>
-        <p className="source-note"><strong>v0.2.0</strong> is preserved as an annotated Git tag and GitHub release. The repository currently remains private while production controls and independent content verification are unfinished.</p>
+        <div className="case-metric"><strong>86</strong><span>offline regression tests covering planning, editing, exports, validation, and request safety</span></div>
+        <p className="source-note"><strong>v0.2.1</strong> closes the local-prototype reliability milestone and is preserved as an annotated Git tag and GitHub release. The repository currently remains private while production controls and independent content verification are unfinished.</p>
       </aside>
       <div className="case-copy">
         <section><p className="kicker">The problem</p><h2>Generating text is only the beginning of lesson planning.</h2><p>Teachers need goals, timing, materials, activities, learner supports, assessment, and standards context to work together. They also need to revise one part without losing work elsewhere and to know when a generated result is incomplete.</p><p>The product reframes generation as one step inside a teacher-controlled drafting and review workflow.</p></section>
@@ -36,7 +36,7 @@ export default function LessonPlannerCaseStudy() {
           <div><dt>Validate structure</dt><dd>Requested sections must appear exactly once with nonempty content. Worksheet items also receive count, identifier, answer, and question-type checks.</dd></div>
           <div><dt>Preserve drafts</dt><dd>Invalid input, API failures, incomplete responses, stale revisions, and overlapping requests leave the last saved draft intact.</dd></div>
           <div><dt>Control paid requests</dt><dd>Opening a page cannot generate content. CSRF-protected POST actions, bounded attempts, disabled automatic retries, and request-size limits guard the provider boundary.</dd></div>
-          <div><dt>Test without credits</dt><dd>The offline suite mocks the AI boundary and exercises the application workflow without calling OpenAI or consuming API credits.</dd></div>
+          <div><dt>Test without credits</dt><dd>The 86-test offline suite mocks the AI boundary and exercises the application workflow without calling OpenAI or consuming API credits. A synthetic long lesson also produced a visually inspected 23-page PDF through the installed local converter.</dd></div>
         </dl></section>
         <section><p className="kicker">Versioning and recovery</p><h2>Give every stable release a named recovery point.</h2><p>The repository now uses semantic versions, a single application version file, a changelog, annotated Git tags, GitHub releases, and a documented rollback procedure. Feature branches and release tags are pushed off-device before riskier changes move forward.</p><p>Code recovery and data recovery are treated separately: Git protects committed source, while secrets, session files, and future production databases require independent encrypted backups.</p></section>
         <section><p className="kicker">Current limits</p><h2>State clearly what the safeguards do not prove.</h2><p>The application does not yet independently retrieve standards or verify factual claims, citations, activity timing, or answer correctness. It has no teacher authentication, durable lesson library, multi-host coordination, or production deployment. Teacher review remains required.</p></section>

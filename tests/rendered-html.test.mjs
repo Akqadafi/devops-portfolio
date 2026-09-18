@@ -55,8 +55,8 @@ test("renders the project hub and migrated data case studies", async () => {
 
   const lessonPlanner = await (await render("/projects/lesson-planner")).text();
   assert.match(lessonPlanner, /Lesson planning with structure, review, and teacher control/);
-  assert.match(lessonPlanner, /v0\.2\.0/);
-  assert.match(lessonPlanner, />75</);
+  assert.match(lessonPlanner, /v0\.2\.1/);
+  assert.match(lessonPlanner, />86</);
   assert.match(lessonPlanner, /offline regression tests covering/);
 });
 
