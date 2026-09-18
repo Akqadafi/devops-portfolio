@@ -1,6 +1,6 @@
 import { ProjectCard } from "./components/project-card";
 import { SiteFooter, SiteHeader } from "./components/site-chrome";
-import { dataProjects, devopsProjects } from "./portfolio-data";
+import { dataProjects, devopsProjects, productProjects } from "./portfolio-data";
 
 const capabilities = [
   ["Cloud Infrastructure", "AWS architecture across networking, compute, data, storage, and edge delivery.", "VPC · EC2 · ECS · RDS · S3 · Lambda · CloudFront · Route 53"],
@@ -29,6 +29,8 @@ export default function Home() {
       <section className="proof-strip" aria-label="Selected career proof points"><div><strong>70%</strong><span>reduction in monthly reporting time through automation</span></div><div><strong>10M+</strong><span>behavioral-health and grant records managed</span></div><div><strong>2</strong><span>disciplines united: cloud engineering and data research</span></div></section>
 
       <section className="projects section-shell" id="projects"><div className="section-heading"><div><p className="kicker">Featured cloud engineering</p><h2>Cloud systems backed by<br />working code and evidence.</h2></div><p>Architecture decisions, Terraform source, operational documentation, and evidence that the critical controls work.</p></div><div className="project-list">{devopsProjects.slice(0, 2).map((project) => <ProjectCard project={project} key={project.title} />)}</div><a className="section-cta" href="/projects#devops">View all cloud projects <span>→</span></a></section>
+
+      <section className="projects section-shell" id="applied-ai"><div className="section-heading"><div><p className="kicker">Applied AI &amp; product engineering</p><h2>AI workflows designed<br />for review and control.</h2></div><p>Product engineering that treats model output as a draft to validate, edit, and approve—not as an unquestioned answer.</p></div><div className="project-list">{productProjects.map((project) => <ProjectCard project={project} key={project.title} />)}</div><a className="section-cta" href="/projects#applied-ai">View applied AI work <span>→</span></a></section>
 
       <section className="data-feature section-shell"><div className="section-heading"><div><p className="kicker">Data &amp; research portfolio</p><h2>Analysis that changed<br />what happened next.</h2></div><p>Mixed-methods studies, statistical modeling, usability testing, and program evaluation—translated into decisions people could act on.</p></div><div className="data-preview-grid">{dataProjects.slice(0, 3).map((project) => <a href={project.href} key={project.title} className="data-preview"><span>{project.number}</span><h3>{project.title}</h3><p>{project.summary}</p>{project.metric && <div><strong>{project.metric}</strong><small>{project.metricLabel}</small></div>}<b>Read case study →</b></a>)}</div><a className="section-cta light" href="/projects#data">View all data projects <span>→</span></a></section>
 

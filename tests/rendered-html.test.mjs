@@ -34,6 +34,7 @@ test("renders the project hub and migrated data case studies", async () => {
   assert.match(projects, /Unlocking the Power of DIY STEM/);
   assert.match(projects, /Investing in Our Future/);
   assert.match(projects, /Community Health Operations Intelligence/);
+  assert.match(projects, /AI-Assisted Lesson Planning Studio/);
 
   const caseStudy = await (await render("/projects/data/diy-stem")).text();
   assert.match(caseStudy, /Latent class analysis/);
@@ -51,6 +52,12 @@ test("renders the project hub and migrated data case studies", async () => {
   const reportingCaseStudy = await (await render("/projects/aws-health-reporting")).text();
   assert.match(reportingCaseStudy, /github\.com\/Akqadafi\/aws-public-health-reporting-workflow/);
   assert.match(reportingCaseStudy, /View source on GitHub/);
+
+  const lessonPlanner = await (await render("/projects/lesson-planner")).text();
+  assert.match(lessonPlanner, /Lesson planning with structure, review, and teacher control/);
+  assert.match(lessonPlanner, /v0\.2\.0/);
+  assert.match(lessonPlanner, />75</);
+  assert.match(lessonPlanner, /offline regression tests covering/);
 });
 
 test("includes recruiter contact and public project destinations", async () => {

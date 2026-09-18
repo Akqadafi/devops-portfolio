@@ -2,7 +2,7 @@ export type Project = {
   slug: string;
   number: string;
   title: string;
-  category: "Cloud & DevOps" | "Data & Research";
+  category: "Cloud & DevOps" | "Applied AI & Product Engineering" | "Data & Research";
   summary: string;
   challenge: string;
   highlights: string[];
@@ -59,6 +59,22 @@ export const devopsProjects: Project[] = [
     href: "/projects/aws-health-reporting",
   },
 
+];
+
+export const productProjects: Project[] = [
+  {
+    slug: "lesson-planner",
+    number: "A01",
+    title: "AI-Assisted Lesson Planning Studio",
+    category: "Applied AI & Product Engineering",
+    summary: "A teacher-controlled planning workspace for modular lessons, student handouts, answer keys, and reviewable AI-assisted drafts.",
+    challenge: "How can AI accelerate lesson preparation without hiding uncertainty, accepting incomplete output, or taking control away from teachers?",
+    highlights: ["Preset, customized, and build-from-scratch lesson paths", "Section-level editing and regeneration that preserve the rest of a draft", "Student handouts, teacher keys, Word/PDF exports, and design themes", "Request safeguards, structured validation, 75 offline tests, and tagged releases"],
+    tags: ["Flask", "OpenAI API", "Product Engineering", "Reliability"],
+    href: "/projects/lesson-planner",
+    metric: "75",
+    metricLabel: "offline regression tests with mocked AI calls",
+  },
 ];
 
 export const dataProjects: Project[] = [
