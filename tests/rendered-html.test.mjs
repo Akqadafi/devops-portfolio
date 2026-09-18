@@ -47,6 +47,10 @@ test("renders the project hub and migrated data case studies", async () => {
   assert.match(healthCaseStudy, /Browse another case study/);
   assert.match(healthCaseStudy, /\/projects\/data\/teen-participation/);
   assert.match(healthCaseStudy, /\/projects\/data\/virtual-club-ux/);
+
+  const reportingCaseStudy = await (await render("/projects/aws-health-reporting")).text();
+  assert.match(reportingCaseStudy, /github\.com\/Akqadafi\/aws-public-health-reporting-workflow/);
+  assert.match(reportingCaseStudy, /View source on GitHub/);
 });
 
 test("includes recruiter contact and public project destinations", async () => {

@@ -28,9 +28,10 @@ export default function ReportingCaseStudy() {
       <aside><p className="kicker">Project context</p><p className="source-note">Portfolio reconstruction for public-health operations, demonstrated with synthetic data.</p>
         <div className="case-metric"><strong>30</strong><span>backend checks passed for validation, workflow state, and recovery</span></div>
         <p className="source-note">Implemented demonstration: React, FastAPI, SQLite, and local files. AWS event integration and PostgreSQL persistence remain planned.</p>
+        <a className="case-repository-link" href="https://github.com/Akqadafi/aws-public-health-reporting-workflow" target="_blank" rel="noreferrer">View source on GitHub ↗</a>
         <a className="case-repository-link" href="/case-studies/aws-health-reporting/operating-procedure.html">Read the operating procedure ↗</a>
         <a className="case-repository-link" href="/case-studies/aws-health-reporting/approved-manifest.json" download>Download example manifest ↓</a>
-        <p className="source-note">The source repository is private. Contact me to discuss the implementation.</p>
+        <p className="source-note">The repository contains the application, automated tests, architecture, infrastructure definitions, and operating documentation.</p>
       </aside>
       <div className="case-copy">
         <section><p className="kicker">The problem</p><h2>Which files are ready, and which output was approved?</h2><p>Recurring reporting brings together files from multiple programs. A valid file can arrive while another dataset is missing. A correction can replace an earlier submission, and a manager can be looking at an outdated version when approving the report.</p><p>The project makes those conditions explicit. File validation, cycle completeness, and manager approval each have their own state.</p></section>
